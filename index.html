@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krølle-Spille – Gratis koncerter på Tejn Havn, Bornholm</title>
+<meta name="description" content="Krølle-Spille er en musikforening på Bornholm, der arrangerer gratis koncerter for alle på havnen i Tejn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --violet:#3b1d60;
+    --violet-deep:#2a1246;
+    --coral:#ff5d5d;
+    --orange:#ff9f1c;
+    --sun:#ffd166;
+    --teal:#06d6a0;
+    --sea:#118ab2;
+    --cream:#fff8ee;
+    --ink:#2b2140;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Space Grotesk',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif}
+
+  /* ============ NAV ============ */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--violet-deep);
+    padding:.75rem 1.5rem;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;
+    border-bottom:4px solid var(--orange);
+  }
+  nav .brand{
+    color:var(--sun);font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    font-size:1rem;text-decoration:none;display:flex;align-items:center;gap:.5rem;
+  }
+  nav .brand .note-dot{
+    width:1.5rem;height:1.5rem;border-radius:50%;
+    background:conic-gradient(var(--coral),var(--orange),var(--teal),var(--sea),var(--coral));
+    display:inline-block;
+  }
+  nav .links a{
+    color:#f3e9ff;text-decoration:none;margin-left:1.2rem;font-size:.85rem;
+    letter-spacing:.05em;font-weight:500;
+  }
+  nav .links a:hover{color:var(--sun)}
+
+  /* ============ HERO ============ */
+  header{
+    position:relative;
+    background:
+      radial-gradient(ellipse 90% 60% at 20% -10%, rgba(255,209,102,.5), transparent 60%),
+      radial-gradient(ellipse 70% 55% at 95% 5%, rgba(6,214,160,.45), transparent 65%),
+      linear-gradient(165deg, var(--violet) 0%, #6e2594 38%, var(--coral) 78%, var(--orange) 100%);
+    color:#fff;
+    text-align:center;
+    padding:5.5rem 1.5rem 8.5rem;
+    overflow:hidden;
+  }
+  header .notes{
+    position:absolute;inset:0;pointer-events:none;opacity:.5;
+    font-size:1.6rem;
+  }
+  header .notes span{position:absolute;animation:floaty 6s ease-in-out infinite}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-16px) rotate(8deg)}}
+  header .eyebrow{
+    display:inline-block;
+    background:var(--sun);color:var(--violet-deep);
+    font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;
+    padding:.4rem 1.2rem;border-radius:2rem;
+    transform:rotate(-2deg);
+    box-shadow:0 4px 0 rgba(42,18,70,.35);
+    margin-bottom:1.6rem;
+  }
+  header h1{
+    font-size:clamp(3rem,10vw,6.5rem);
+    font-weight:900;
+    line-height:1.02;
+    letter-spacing:.01em;
+    text-shadow:.05em .06em 0 var(--violet-deep);
+    margin-bottom:1.2rem;
+  }
+  header p.tagline{
+    font-size:clamp(1.05rem,2.6vw,1.4rem);
+    max-width:40rem;margin:0 auto 2.2rem;
+    color:#fff6e6;font-weight:500;
+  }
+  .hero-cta{
+    display:inline-block;
+    background:var(--teal);color:var(--violet-deep);
+    font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:.9rem 2.2rem;border-radius:3rem;text-decoration:none;
+    box-shadow:0 6px 0 rgba(42,18,70,.4);
+    transition:transform .15s;
+  }
+  .hero-cta:hover{transform:translateY(-3px)}
+  .hero-wave{
+    position:absolute;bottom:-2px;left:0;width:100%;line-height:0;
+  }
+  .hero-wave svg{width:100%;height:80px;display:block}
+
+  /* ============ LAYOUT ============ */
+  main{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+  section{padding:4.5rem 0 1.5rem}
+  .kicker{
+    display:inline-block;
+    font-weight:700;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;
+    color:#fff;padding:.3rem 1rem;border-radius:2rem;margin-bottom:.8rem;
+    transform:rotate(-1.5deg);
+  }
+  h2{
+    font-size:clamp(1.9rem,4.5vw,2.7rem);
+    font-weight:900;color:var(--violet);
+    margin-bottom:1.6rem;line-height:1.15;
+  }
+  p{margin-bottom:1.1rem}
+  .lead{font-size:1.2rem;font-weight:500}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+
+  /* ============ OM – highlight cards ============ */
+  .fact-band{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;
+    margin:2.4rem 0 .5rem;
+  }
+  @media(max-width:640px){.fact-band{grid-template-columns:1fr}}
+  .fact{
+    border-radius:1.2rem;padding:1.4rem 1.5rem;color:#fff;
+    box-shadow:0 6px 0 rgba(42,18,70,.18);
+  }
+  .fact:nth-child(1){background:var(--coral);transform:rotate(-1deg)}
+  .fact:nth-child(2){background:var(--sea);transform:rotate(1deg)}
+  .fact:nth-child(3){background:var(--violet);transform:rotate(-.5deg)}
+  .fact .big{font-family:'Fraunces',serif;font-size:2.3rem;font-weight:900;line-height:1;display:block;margin-bottom:.3rem}
+  .fact .small{font-size:.9rem;font-weight:500;opacity:.95}
+
+  /* ============ FORMÅLSPARAGRAF ============ */
+  .vedtaegter{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+  @media(max-width:640px){.vedtaegter{grid-template-columns:1fr}}
+  .par{
+    background:#fff;border-radius:1.2rem;padding:1.6rem 1.8rem;
+    border:2px solid var(--ink);
+    box-shadow:6px 6px 0 var(--sun);
+  }
+  .par:nth-child(2n){box-shadow:6px 6px 0 var(--teal)}
+  .par:nth-child(3n){box-shadow:6px 6px 0 var(--coral)}
+  .par h3{font-size:1.1rem;font-weight:900;color:var(--violet);margin-bottom:.5rem}
+  .par .pnum{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:var(--violet);color:var(--sun);
+    border-radius:.6rem;padding:.1rem .6rem;margin-right:.55rem;
+    font-family:'Space Grotesk',sans-serif;font-size:.85rem;
+  }
+  .par p{margin-bottom:.4rem;font-size:.97rem}
+  .par.wide{grid-column:1/-1}
+
+  /* ============ KONCERTER ============ */
+  .year-block{margin-bottom:2.6rem}
+  .year-chip{
+    display:inline-block;font-family:'Fraunces',serif;font-weight:900;
+    font-size:1.25rem;color:#fff;padding:.25rem 1.3rem;border-radius:2rem;
+    margin-bottom:1.1rem;transform:rotate(-2deg);
+    box-shadow:0 4px 0 rgba(42,18,70,.25);
+  }
+  .y2026 .year-chip{background:var(--coral)}
+  .y2025 .year-chip{background:var(--sea)}
+  .y2024 .year-chip{background:var(--teal);color:var(--violet-deep)}
+  .y2023 .year-chip{background:var(--orange);color:var(--violet-deep)}
+  .y2022 .year-chip{background:var(--violet)}
+  .gig{
+    display:flex;align-items:baseline;gap:1.1rem;flex-wrap:wrap;
+    background:#fff;border-radius:1rem;
+    padding:.85rem 1.3rem;margin-bottom:.7rem;
+    border:2px solid var(--ink);
+    transition:transform .12s;
+  }
+  .gig:hover{transform:translateX(6px)}
+  .y2026 .gig{border-left:10px solid var(--coral)}
+  .y2025 .gig{border-left:10px solid var(--sea)}
+  .y2024 .gig{border-left:10px solid var(--teal)}
+  .y2023 .gig{border-left:10px solid var(--orange)}
+  .y2022 .gig{border-left:10px solid var(--violet)}
+  .gig .date{
+    font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;
+    color:#7a6f95;white-space:nowrap;min-width:6.2rem;
+  }
+  .gig .act{font-family:'Fraunces',serif;font-weight:600;font-size:1.12rem;color:var(--violet-deep)}
+  .gig .note{font-size:.88rem;color:#7a6f95;font-style:italic}
+  .free-tag{
+    display:inline-block;background:var(--sun);color:var(--violet-deep);
+    font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    border-radius:3px;padding:.12rem .5rem;margin-left:.15rem;vertical-align:middle;
+    transform:rotate(-2deg);
+  }
+  .upcoming{
+    background:linear-gradient(135deg,var(--violet) 0%, #6e2594 100%);
+    border-radius:1.4rem;padding:2rem 2.2rem;margin-top:2.8rem;color:#fff;
+    box-shadow:0 8px 0 rgba(42,18,70,.25);
+  }
+  .upcoming h3{
+    font-size:1.5rem;font-weight:900;color:var(--sun);margin-bottom:1rem;
+  }
+  .upcoming .gig{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35);border-left:10px solid var(--sun)}
+  .upcoming .gig .act{color:#fff}
+  .upcoming .gig .date{color:var(--sun)}
+  .upcoming .gig .note{color:#d9c9f2}
+  .source-note{font-size:.85rem;color:#7a6f95;margin-top:1.4rem;font-style:italic}
+  .source-note a{color:var(--sea)}
+
+  /* ============ STØTTE (skjult) ============ */
+  .stotte-section{display:none} /* Sektionen er skjult efter ønske – fjern denne linje for at vise den igen */
+  .stotte{
+    background:var(--violet);color:#f0e8fb;border-radius:1.4rem;
+    padding:2.4rem 2.6rem;margin-top:1rem;
+  }
+  .stotte h2{color:var(--sun)}
+
+  /* ============ KONTAKT ============ */
+  .kontakt-card{
+    background:#fff;border:2px solid var(--ink);border-radius:1.4rem;
+    box-shadow:8px 8px 0 var(--coral);
+    padding:2.2rem 2.4rem;
+  }
+  .kontakt-card dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.6rem}
+  @media(max-width:480px){.kontakt-card dl{grid-template-columns:1fr}}
+  .kontakt-card dt{font-weight:700;color:var(--violet)}
+  .kontakt-card a{color:var(--coral);font-weight:600}
+
+  /* ============ FOOTER ============ */
+  footer{
+    margin-top:5rem;
+    background:var(--violet-deep);color:#c9b8e8;
+    text-align:center;padding:2.4rem 1.5rem 2.8rem;font-size:.85rem;
+    border-top:6px solid var(--orange);
+  }
+  footer .footer-notes{color:var(--orange);letter-spacing:1.2rem;font-size:1rem;display:block;margin-bottom:.8rem}
+
+  /* wave divider */
+  .wave-div{line-height:0;margin:2.5rem 0 0}
+  .wave-div svg{width:100%;height:36px;display:block}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top"><span class="note-dot"></span> Krølle-Spille</a>
+  <span class="links">
+    <a href="#om">Om foreningen</a>
+    <a href="#formaal">Formålsparagraf</a>
+    <a href="#koncerter">Koncerter</a>
+    <a href="#kontakt">Kontakt</a>
+  </span>
+</nav>
+
+<header id="top">
+  <div class="notes" aria-hidden="true">
+    <span style="top:18%;left:8%">♪</span>
+    <span style="top:34%;left:88%;animation-delay:1.2s">♫</span>
+    <span style="top:64%;left:14%;animation-delay:2.1s">♬</span>
+    <span style="top:22%;left:72%;animation-delay:.6s">♩</span>
+    <span style="top:70%;left:80%;animation-delay:1.7s">♪</span>
+  </div>
+  <span class="eyebrow">Musikforening · Tejn Havn · Bornholm</span>
+  <h1>Krølle-<br>Spille</h1>
+  <p class="tagline">Levende musik på kajkanten – gratis og for alle. Blues, jazz, ballader og DJ-eftermiddage med havudsigt siden 2022.</p>
+  <a class="hero-cta" href="#koncerter">Se koncerterne ♪</a>
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C180,90 360,-10 540,30 C720,70 900,10 1080,35 C1260,60 1380,20 1440,35 L1440,80 L0,80 Z" fill="#fff8ee"/></svg>
+  </div>
+</header>
+
+<main>
+
+  <section id="om">
+    <span class="kicker" style="background:var(--coral)">Hvem vi er</span>
+    <h2>Musik til alle på havnen i Tejn</h2>
+    <p class="lead">Krølle-Spille er en musikforening med hjemsted i Tejn på Nordbornholm. Foreningens omdrejningspunkt er at bringe levende musik ud til alle &ndash; uden entré, uden tilmelding og uden barrierer.</p>
+    <div class="two-col">
+      <div>
+        <p>Siden 2022 har kredsen bag foreningen arrangeret gratis koncerter og musikarrangementer på Vestkajen på Tejn Havn, i samarbejde med det lokale bryggerimiljø omkring Penyllan Bryggeri og Brewery Bar &amp; Shop. Her mødes fastboende, sommergæster og turister om alt fra bluestroubadourer og jazzkvartetter til balladeorkestre og DJ-eftermiddage.</p>
+      </div>
+      <div>
+        <p>Tejn er et lille havnesamfund, og det musikalske kulturudbud uden for højsæsonen og de store byer er begrænset. Med gratiskoncerterne ønsker foreningen at gøre havnen til et levende kulturelt samlingssted &ndash; med musikoplevelser af høj kvalitet fra såvel bornholmske musikere som gæstende kunstnere fra resten af landet.</p>
+      </div>
+    </div>
+    <div class="fact-band">
+      <div class="fact"><span class="big">20+</span><span class="small">gratis koncerter og musik&shy;arrangementer siden 2022</span></div>
+      <div class="fact"><span class="big">0 kr.</span><span class="small">i entré &ndash; altid. Musikken er gratis og åben for alle</span></div>
+      <div class="fact"><span class="big">5</span><span class="small">somre med levende musik på Tejn Havn</span></div>
+    </div>
+  </section>
+
+  <section id="formaal">
+    <span class="kicker" style="background:var(--sea)">Vedtægter · uddrag</span>
+    <h2>Formålsparagraf</h2>
+    <div class="vedtaegter">
+      <div class="par">
+        <h3><span class="pnum">§ 1</span>Navn og hjemsted</h3>
+        <p>Foreningens navn er <strong>Krølle-Spille</strong>. Foreningen har hjemsted i Bornholms Regionskommune med udgangspunkt i Tejn, 3770 Allinge.</p>
+      </div>
+      <div class="par">
+        <h3><span class="pnum">§ 2</span>Formål</h3>
+        <p>Foreningens formål er at fremme levende musik og musikalsk fællesskab på Bornholm ved at planlægge og afholde gratis, offentligt tilgængelige koncerter og musikarrangementer &ndash; fortrinsvis i havnemiljøet i Tejn &ndash; med deltagelse af både lokale og tilrejsende musikere.</p>
+      </div>
+      <div class="par">
+        <h3><span class="pnum">§ 3</span>Aktiviteter</h3>
+        <p>Formålet søges opnået ved bl.a. at arrangere gratiskoncerter og andre musikalske arrangementer, at samarbejde med lokale virksomheder, foreninger og kulturaktører om rammer og afvikling, samt at give vækstlaget og lokale musikere en scene at optræde på.</p>
+      </div>
+      <div class="par">
+        <h3><span class="pnum">§ 4</span>Almennyttighed og økonomi</h3>
+        <p>Foreningen er almennyttig og arbejder ikke med økonomisk vinding for øje. Foreningens midler &ndash; herunder offentlige tilskud, fondsmidler og sponsorater &ndash; anvendes alene til opfyldelse af foreningens formål, herunder musikerhonorarer, lyd- og sceneteknik samt formidling af arrangementerne. Et eventuelt overskud overføres til kommende aktiviteter.</p>
+      </div>
+      <div class="par wide">
+        <h3><span class="pnum">§ 5</span>Medlemskab</h3>
+        <p>Som medlem kan optages enhver, der ønsker at støtte foreningens formål.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="koncerter">
+    <span class="kicker" style="background:var(--orange);color:var(--violet-deep)">Det har vi gjort</span>
+    <h2>Afholdte koncerter</h2>
+    <p>Gratis koncerter og musikarrangementer afholdt på Tejn Havn (Vestkajen 5, 3770 Allinge) i regi af kredsen bag foreningen. Alle arrangementer har været gratis og åbne for alle.</p>
+
+    <div class="year-block y2026">
+      <span class="year-chip">2026</span>
+      <div class="gig"><span class="date">15. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
+      <div class="gig"><span class="date">12. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour &ndash; gensyn på havnen</span></div>
+      <div class="gig"><span class="date">8. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
+    </div>
+
+    <div class="year-block y2025">
+      <span class="year-chip">2025</span>
+      <div class="gig"><span class="date">3. august</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen fra Østermarie</span></div>
+      <div class="gig"><span class="date">16. juli</span><span class="act">DJ BaronFar &amp; DJ Knit It <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+    </div>
+
+    <div class="year-block y2024">
+      <span class="year-chip">2024</span>
+      <div class="gig"><span class="date">17. august</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester på Tejn Havn</span></div>
+      <div class="gig"><span class="date">4. august</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter</span></div>
+    </div>
+
+    <div class="year-block y2023">
+      <span class="year-chip">2023</span>
+      <div class="gig"><span class="date">27. juli</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
+      <div class="gig"><span class="date">23. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Jazzkvartet &ndash; danske og udenlandske jazzklassikere</span></div>
+      <div class="gig"><span class="date">16. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour</span></div>
+      <div class="gig"><span class="date">9. juli</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter &ndash; debut på havnen</span></div>
+      <div class="gig"><span class="date">8. juli</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester</span></div>
+      <div class="gig"><span class="date">2. juli</span><span class="act">Henriette Engelhart <span class="free-tag">Gratis</span></span><span class="note">Sang og klaver &ndash; soulfuld stemning på havnen</span></div>
+    </div>
+
+    <div class="year-block y2022">
+      <span class="year-chip">2022</span>
+      <div class="gig"><span class="date">5. august</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Unikt band på besøg</span></div>
+      <div class="gig"><span class="date">24. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Live jazz på bryggeriet</span></div>
+      <div class="gig"><span class="date">23. juli</span><span class="act">DJ Disco Ditmar <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
+    </div>
+
+    <div class="upcoming">
+      <h3>♪ Kommende koncerter</h3>
+      <div class="gig"><span class="date">18. juli · 15:00</span><span class="act">Bajers Balladeband <span class="free-tag">Gratis</span></span><span class="note">Den drikfældige septet vender tilbage</span></div>
+      <div class="gig"><span class="date">18. juli · 18:00</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Gensyn på bryggeriet</span></div>
+      <div class="gig"><span class="date">22. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+      <div class="gig"><span class="date">29. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+    </div>
+
+    <p class="source-note">Alle arrangementer er annonceret offentligt på Facebook-siden <a href="https://www.facebook.com/penyllanbarandshop">Brewery Bar &amp; Shop</a> og i eventkalenderen på <a href="https://penyllan.com/events/">penyllan.com</a>.</p>
+  </section>
+
+  <!-- Sektionen "Derfor søger vi støtte" er skjult (CSS: .stotte-section{display:none}) -->
+  <section class="stotte-section" id="stotte">
+    <div class="stotte">
+      <h2>Derfor søger vi støtte</h2>
+      <p>Gratiskoncerterne finansieres i dag af frivillige kræfter og lokale bidrag. Med økonomisk støtte fra Bornholms Regionskommune kan foreningen sikre fair honorarer til musikerne, professionel lyd og teknik samt flere koncerter hen over sæsonen &ndash; til glæde for både fastboende og de mange gæster, der besøger Nordbornholm.</p>
+      <p>Hver krone går ubeskåret til musikken: honorar, teknik og formidling. Adgangen er &ndash; og bliver ved med at være &ndash; gratis for publikum.</p>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <span class="kicker" style="background:var(--teal);color:var(--violet-deep)">Kom i kontakt</span>
+    <h2>Kontakt</h2>
+    <div class="kontakt-card">
+      <dl>
+        <dt>Forening</dt><dd>Krølle-Spille</dd>
+        <dt>Kontaktperson</dt><dd>Christian Andersen</dd>
+        <dt>E-mail</dt><dd><a href="mailto:christian@beerhere.dk">christian@beerhere.dk</a></dd>
+        <dt>Spillested</dt><dd>Tejn Havn, Vestkajen 5, 3770 Allinge</dd>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="footer-notes">♪ ♫ ♬ ♩ ♪</span>
+  Krølle-Spille &middot; Musikforening på Bornholm &middot; Gratis koncerter på Tejn Havn
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "forening": "Krølle-Spille",
+  "spillested": "Tejn Havn, Vestkajen 5, 3770 Allinge, Bornholm",
+  "kilder": [
+    "https://www.facebook.com/penyllanbarandshop",
+    "https://penyllan.com/events/"
+  ],
+  "afholdte": [
+    {"dato": "2026-07-15", "kunstner": "DJ Allan Kaas", "type": "DJ", "gratis": true},
+    {"dato": "2026-07-12", "kunstner": "Copenhagen Slim", "type": "Koncert (blues)", "gratis": true},
+    {"dato": "2026-07-08", "kunstner": "DJ Allan Kaas", "type": "DJ", "gratis": true},
+    {"dato": "2025-08-03", "kunstner": "DJ DreadSpace", "type": "DJ", "gratis": true},
+    {"dato": "2025-07-16", "kunstner": "DJ BaronFar & DJ Knit It", "type": "DJ", "gratis": true},
+    {"dato": "2024-08-17", "kunstner": "Bajers Ballade Band", "type": "Koncert (ballade)", "gratis": true},
+    {"dato": "2024-08-04", "kunstner": "Joakim Lykke", "type": "Koncert (singer-songwriter)", "gratis": true},
+    {"dato": "2023-07-27", "kunstner": "DJ DreadSpace", "type": "DJ", "gratis": true},
+    {"dato": "2023-07-23", "kunstner": "C. Lunds Jazz and Swing", "type": "Koncert (jazz)", "gratis": true},
+    {"dato": "2023-07-16", "kunstner": "Copenhagen Slim", "type": "Koncert (blues)", "gratis": true},
+    {"dato": "2023-07-09", "kunstner": "Joakim Lykke", "type": "Koncert (singer-songwriter)", "gratis": true},
+    {"dato": "2023-07-08", "kunstner": "Bajers Ballade Band", "type": "Koncert (ballade)", "gratis": true},
+    {"dato": "2023-07-02", "kunstner": "Henriette Engelhart", "type": "Koncert (sang og klaver)", "gratis": true},
+    {"dato": "2022-08-05", "kunstner": "Morten Skou Andersen & de mennesker han normalt sammenligner sig med", "type": "Koncert", "gratis": true},
+    {"dato": "2022-07-24", "kunstner": "C. Lunds Jazz and Swing", "type": "Koncert (jazz)", "gratis": true},
+    {"dato": "2022-07-23", "kunstner": "DJ Disco Ditmar", "type": "DJ", "gratis": true}
+  ],
+  "kommende": [
+    {"dato": "2026-07-18", "tid": "15:00", "kunstner": "Bajers Balladeband", "type": "Koncert (ballade)", "gratis": true},
+    {"dato": "2026-07-18", "tid": "18:00", "kunstner": "Morten Skou Andersen & de mennesker han normalt sammenligner sig med", "type": "Koncert", "gratis": true},
+    {"dato": "2026-07-22", "tid": "16:00", "kunstner": "DJ Allan", "type": "DJ", "gratis": true},
+    {"dato": "2026-07-29", "tid": "16:00", "kunstner": "DJ Allan", "type": "DJ", "gratis": true}
+  ],
+  "noter": "Årstal for datoer uden eksplicit år er udledt af ugedagene i annonceringerne. Sektionen 'Derfor søger vi støtte' er skjult i index.html via CSS (.stotte-section{display:none})."
+}

@@ -178,13 +178,28 @@
   .y2023 .year-chip{background:var(--orange);color:var(--violet-deep)}
   .y2022 .year-chip{background:var(--violet)}
   .gig{
-    display:flex;align-items:baseline;gap:1.1rem;flex-wrap:wrap;
+    display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;
     background:#fff;border-radius:1rem;
-    padding:.85rem 1.3rem;margin-bottom:.7rem;
+    padding:.7rem 1.3rem .7rem .8rem;margin-bottom:.7rem;
     border:2px solid var(--ink);
     transition:transform .12s;
   }
   .gig:hover{transform:translateX(6px)}
+  .gig .thumb{
+    width:64px;height:64px;object-fit:cover;flex-shrink:0;
+    border-radius:14px;border:2px solid var(--ink);
+    transform:rotate(-3deg);
+    box-shadow:3px 3px 0 var(--sun);
+    background:var(--violet);
+  }
+  .gig:nth-child(even) .thumb{transform:rotate(3deg);box-shadow:3px 3px 0 var(--teal)}
+  .gig .thumb-ph{
+    width:64px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    border-radius:14px;border:2px solid var(--ink);
+    transform:rotate(-3deg);box-shadow:3px 3px 0 var(--coral);
+    background:linear-gradient(135deg,var(--violet),#6e2594);
+    color:var(--sun);font-size:1.6rem;
+  }
   .y2026 .gig{border-left:10px solid var(--coral)}
   .y2025 .gig{border-left:10px solid var(--sea)}
   .y2024 .gig{border-left:10px solid var(--teal)}
@@ -334,46 +349,46 @@
 
     <div class="year-block y2026">
       <span class="year-chip">2026</span>
-      <div class="gig"><span class="date">15. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
-      <div class="gig"><span class="date">12. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour &ndash; gensyn på havnen</span></div>
-      <div class="gig"><span class="date">8. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2026/07/IMG_6981-2.jpg" alt="DJ Allan Kaas" loading="lazy"><span class="date">15. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Copenhagen-slim.jpeg" alt="Copenhagen Slim" loading="lazy"><span class="date">12. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour &ndash; gensyn på havnen</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2026/07/IMG_6981-2.jpg" alt="DJ Allan Kaas" loading="lazy"><span class="date">8. juli</span><span class="act">DJ Allan Kaas <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag på bryggeriet</span></div>
     </div>
 
     <div class="year-block y2025">
       <span class="year-chip">2025</span>
-      <div class="gig"><span class="date">3. august</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen fra Østermarie</span></div>
-      <div class="gig"><span class="date">16. juli</span><span class="act">DJ BaronFar &amp; DJ Knit It <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2025/07/IMG_5644.jpg" alt="DJ DreadSpace" loading="lazy"><span class="date">3. august</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen fra Østermarie</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/07/IMG_5596.jpg" alt="DJ BaronFar & DJ Knit It" loading="lazy"><span class="date">16. juli</span><span class="act">DJ BaronFar &amp; DJ Knit It <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
     </div>
 
     <div class="year-block y2024">
       <span class="year-chip">2024</span>
-      <div class="gig"><span class="date">17. august</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester på Tejn Havn</span></div>
-      <div class="gig"><span class="date">4. august</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Frederik-v-1.jpg" alt="Bajers Ballade Band" loading="lazy"><span class="date">17. august</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester på Tejn Havn</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2024/07/Joakim.jpg" alt="Joakim Lykke" loading="lazy"><span class="date">4. august</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter</span></div>
     </div>
 
     <div class="year-block y2023">
       <span class="year-chip">2023</span>
-      <div class="gig"><span class="date">27. juli</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
-      <div class="gig"><span class="date">23. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Jazzkvartet &ndash; danske og udenlandske jazzklassikere</span></div>
-      <div class="gig"><span class="date">16. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour</span></div>
-      <div class="gig"><span class="date">9. juli</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter &ndash; debut på havnen</span></div>
-      <div class="gig"><span class="date">8. juli</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester</span></div>
-      <div class="gig"><span class="date">2. juli</span><span class="act">Henriette Engelhart <span class="free-tag">Gratis</span></span><span class="note">Sang og klaver &ndash; soulfuld stemning på havnen</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2025/07/IMG_5644.jpg" alt="DJ DreadSpace" loading="lazy"><span class="date">27. juli</span><span class="act">DJ DreadSpace <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/IMG_8719.jpg" alt="C. Lunds Jazz and Swing" loading="lazy"><span class="date">23. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Jazzkvartet &ndash; danske og udenlandske jazzklassikere</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Copenhagen-slim.jpeg" alt="Copenhagen Slim" loading="lazy"><span class="date">16. juli</span><span class="act">Copenhagen Slim <span class="free-tag">Gratis</span></span><span class="note">Bluestroubadour</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2024/07/Joakim.jpg" alt="Joakim Lykke" loading="lazy"><span class="date">9. juli</span><span class="act">Joakim Lykke <span class="free-tag">Gratis</span></span><span class="note">Singer-songwriter &ndash; debut på havnen</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Frederik-v-1.jpg" alt="Bajers Ballade Band" loading="lazy"><span class="date">8. juli</span><span class="act">Bajers Ballade Band <span class="free-tag">Gratis</span></span><span class="note">Balladeorkester</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Henriette.jpeg" alt="Henriette Engelhart" loading="lazy"><span class="date">2. juli</span><span class="act">Henriette Engelhart <span class="free-tag">Gratis</span></span><span class="note">Sang og klaver &ndash; soulfuld stemning på havnen</span></div>
     </div>
 
     <div class="year-block y2022">
       <span class="year-chip">2022</span>
-      <div class="gig"><span class="date">5. august</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Unikt band på besøg</span></div>
-      <div class="gig"><span class="date">24. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Live jazz på bryggeriet</span></div>
-      <div class="gig"><span class="date">23. juli</span><span class="act">DJ Disco Ditmar <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2022/07/208444755_4419434864733725_5283323717553696589_n-e1658561594553.jpg" alt="Morten Skou Andersen & de mennesker han normalt sammenligner sig med" loading="lazy"><span class="date">5. august</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Unikt band på besøg</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/IMG_8719.jpg" alt="C. Lunds Jazz and Swing" loading="lazy"><span class="date">24. juli</span><span class="act">C. Lunds Jazz and Swing <span class="free-tag">Gratis</span></span><span class="note">Live jazz på bryggeriet</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2022/07/Screenshot-2022-07-23-at-08.57.41-e1658559496998.png" alt="DJ Disco Ditmar" loading="lazy"><span class="date">23. juli</span><span class="act">DJ Disco Ditmar <span class="free-tag">Gratis</span></span><span class="note">DJ på havnen</span></div>
     </div>
 
     <div class="upcoming">
       <h3>♪ Kommende koncerter</h3>
-      <div class="gig"><span class="date">18. juli · 15:00</span><span class="act">Bajers Balladeband <span class="free-tag">Gratis</span></span><span class="note">Den drikfældige septet vender tilbage</span></div>
-      <div class="gig"><span class="date">18. juli · 18:00</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Gensyn på bryggeriet</span></div>
-      <div class="gig"><span class="date">22. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
-      <div class="gig"><span class="date">29. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2023/06/Frederik-v-1.jpg" alt="Bajers Balladeband" loading="lazy"><span class="date">18. juli · 15:00</span><span class="act">Bajers Balladeband <span class="free-tag">Gratis</span></span><span class="note">Den drikfældige septet vender tilbage</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2022/07/208444755_4419434864733725_5283323717553696589_n-e1658561594553.jpg" alt="Morten Skou Andersen & de mennesker han normalt sammenligner sig med" loading="lazy"><span class="date">18. juli · 18:00</span><span class="act">Morten Skou Andersen &amp; de mennesker han normalt sammenligner sig med <span class="free-tag">Gratis</span></span><span class="note">Gensyn på bryggeriet</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2026/07/IMG_6981-2.jpg" alt="DJ Allan" loading="lazy"><span class="date">22. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
+      <div class="gig"><img class="thumb" src="https://penyllan.com/wp-content/uploads/2026/07/IMG_6981-2.jpg" alt="DJ Allan" loading="lazy"><span class="date">29. juli · 16:00</span><span class="act">DJ Allan <span class="free-tag">Gratis</span></span><span class="note">DJ-eftermiddag</span></div>
     </div>
 
     <p class="source-note">Alle arrangementer er annonceret offentligt på Facebook-siden <a href="https://www.facebook.com/penyllanbarandshop">Brewery Bar &amp; Shop</a> og i eventkalenderen på <a href="https://penyllan.com/events/">penyllan.com</a>.</p>
